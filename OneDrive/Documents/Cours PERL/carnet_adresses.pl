@@ -41,7 +41,7 @@ charger_contacts();
 sub add_contact {
     print "entrez un nom et un prenom\n";
     chomp(my $nom_prenom = <STDIN>);
-    print "entrez un numero de téléphone\n";
+   
 
 
     while ($nom_prenom eq '') {
@@ -49,15 +49,16 @@ sub add_contact {
         chomp($nom_prenom = <STDIN>);
     }
 
-
+    print "entrez un numero de téléphone\n";
     chomp(my $tel = <STDIN>);
-    print "entrez une adresse courriel\n";
 
     while ($tel !~ /^\d+$/) {
         print "Le numéro de téléphone doit contenir uniquement des chiffres. Veuillez réessayer :\n";
         chomp($tel = <STDIN>);
     }
 
+    
+    print "entrez une adresse courriel\n";
     chomp(my $mail = <STDIN>);
 
     while ($mail !~ /^[\w\.\-]+@\w+\.\w+$/) {
@@ -167,6 +168,6 @@ while (1) {
     } else {
         print "Choix invalide, veuillez reessayer.\n";
     }
-    }
+}
 
 
